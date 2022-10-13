@@ -17,7 +17,7 @@ def check_ans(input_val):
         x6 = -a-b+c+d
         an = [x1, x2, x3, x4, x5, x6]
         for j in an:
-            if j >= -a and j != 0:
+            if j < 0 and j + a >= 0:
                 ans.append((i, j))
         inp.append(inp.pop(0))
     return ans
