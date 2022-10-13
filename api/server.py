@@ -50,4 +50,4 @@ def act():
         ret_ = inp.copy()
         ret_[a[0]] += a[1]
         ret.append(ret_)
-    return json.dumps(ans)
+    return json.dumps(ret)
