@@ -40,14 +40,17 @@ def act():
     inp = inp_
     ans = check_ans(inp)
     final_ans = []
+    f = []
     for a in ans:
         now = inp.copy()
         now[a[0]] += a[1]
         if not check_ans(now):
             final_ans.append(a)
+        else:
+            f.append(check_ans(now))
     ret = []
     for a in final_ans:
         ret_ = inp.copy()
         ret_[a[0]] += a[1]
         ret.append(ret_)
-    return json.dumps(ret)
+    return json.dumps(ret)+json.dumps(f)
