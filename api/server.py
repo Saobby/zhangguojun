@@ -23,7 +23,7 @@ def check_ans(input_val):
     return ans
 
 
-@app.route("/api/act", methods=["get, "post"])
+@app.route("/api/act", methods=["get", "post"])
 def act():
     inp = request.args.get("input")
     if inp is None:
